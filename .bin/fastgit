@@ -1,0 +1,25 @@
+#!/bin/bash
+source "$HOME/.lib/bash_colors.sh"
+
+if [ $# -eq 0 ]
+then
+  COMMIT_MSG="update"
+else
+  COMMIT_MSG="$@"
+fi
+
+printf "$COLOR_BLUE"
+printf "==> Pull changes from remote..."
+printf "\n$COLOR_NC"
+git pull
+
+printf "$COLOR_BLUE"
+printf "==> Commit changes..."
+printf "\n$COLOR_NC"
+git add .
+git commit -S -m "$COMMIT_MSG"
+
+printf "$COLOR_BLUE"
+printf "==> Push to remote..."
+printf "\n$COLOR_NC"
+git push --follow-tags

@@ -1,0 +1,30 @@
+#!/bin/bash
+set -e
+
+filepath="$HOME/Pictures/$(date +%F-%T).png"
+
+case "$1" in
+  select)
+    maim -u -s -f png "$filepath"
+    imgurs upload "$filepath"
+    exit
+    ;;
+  window)
+    maim -u -i $(xdotool getactivewindow) -f png "$filepath"
+    imgurs upload "$filepath"
+    exit
+    ;;
+  fullscreen)
+    maim -u -f png "$filepath"
+    imgurs upload "$filepath"
+    exit
+    ;;
+  *)
+    source "$HOME/.lib/bash_colors.sh"
+
+    printf "$COLOR_YELLOW"
+    printf "Usage: screenshot <select/window/fullscreen>"
+    printf "\n$COLOR_NC"
+    exit 1
+    ;;
+esac

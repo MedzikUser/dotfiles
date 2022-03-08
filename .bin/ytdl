@@ -1,0 +1,21 @@
+#!/bin/bash
+source "$HOME/.lib/bash_colors.sh"
+
+while true
+do
+  printf "$COLOR_BLUE"
+  if yt-dlp $@
+  then
+    printf "$COLOR_GREEN"
+    printf "Exit code $?, SUCCESS!"
+    printf "\n$COLOR_NC"
+
+    break
+  else
+    printf "$COLOR_RED"
+    printf "Exit code $?, retrying..."
+    printf "\n$COLOR_NC"
+  fi
+
+  sleep 5
+done
