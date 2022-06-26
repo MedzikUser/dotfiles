@@ -1,0 +1,120 @@
+{
+    "workbench.colorCustomizations": {
+        // Color of editor active line number
+        "editorLineNumber.activeForeground": "#ffffff",
+        // Color of editor line numbers
+        "editorLineNumber.foreground": "#777777",
+
+        // Foreground color of inline hints
+        "editorInlayHint.foreground": "#868686f0",
+        // Background color of inline hints
+        "editorInlayHint.background": "#3d3d3d48",
+
+        // rust-analyzer types color
+        // Foreground color of inline hints for types
+        "editorInlayHint.typeForeground": "#fdb6fdf0",
+        // Foreground color of inline hints for parameters
+        "editorInlayHint.parameterForeground": "#fdb6fdf0",
+
+        // GitLens blame color
+        // https://github.com/gitkraken/vscode-gitlens/issues/1089#issuecomment-675109373
+        "gitlens.trailingLineForegroundColor": "#575757f0",
+
+        // "[Material Theme Ocean]": {
+        //     "activityBarBadge.background": "#00BCD4",
+        //     "activityBar.activeBorder": "#00BCD4",
+        //     "list.activeSelectionForeground": "#00BCD4",
+        //     "list.inactiveSelectionForeground": "#00BCD4",
+        //     "list.highlightForeground": "#00BCD4",
+        //     "scrollbarSlider.activeBackground": "#00BCD450",
+        //     "editorSuggestWidget.highlightForeground": "#00BCD4",
+        //     "textLink.foreground": "#00BCD4",
+        //     "progressBar.background": "#00BCD4",
+        //     "pickerGroup.foreground": "#00BCD4",
+        //     "tab.activeBorder": "#00BCD4",
+        //     "notificationLink.foreground": "#00BCD4",
+        //     "editorWidget.resizeBorder": "#00BCD4",
+        //     "editorWidget.border": "#00BCD4",
+        //     "settings.modifiedItemIndicator": "#00BCD4",
+        //     "settings.headerForeground": "#00BCD4",
+        //     "panelTitle.activeBorder": "#00BCD4",
+        //     "breadcrumb.activeSelectionForeground": "#00BCD4",
+        //     "menu.selectionForeground": "#00BCD4",
+        //     "menubar.selectionForeground": "#00BCD4",
+        //     "editor.findMatchBorder": "#00BCD4",
+        //     "selection.background": "#00BCD440",
+        //     "statusBarItem.remoteBackground": "#00BCD4"
+        // }
+    },
+    "workbench.editor.showTabs": false,
+    "workbench.startupEditor": "none",
+    "workbench.sideBar.location": "right",
+    "window.titleBarStyle": "custom",
+    "window.title": "${activeEditorMedium}${separator}${rootName} ${dirty}",
+    "editor.tokenColorCustomizations": {
+        // Sets the colors and styles for comments
+        "comments": "#999999",
+    },
+    "editor.renderWhitespace": "all",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 19,
+    "editor.letterSpacing": 0,
+    "editor.fontFamily": "Fira Code Medium",
+    "editor.suggestFontSize": 16,
+    "editor.suggestLineHeight": 28,
+    "editor.renderLineHighlight": "none",
+    "editor.lineNumbers": "on",
+    "editor.minimap.enabled": false,
+    "editor.codeLens": false,
+    "editor.fontLigatures": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.lineHeight": 1.5,
+    "terminal.integrated.cursorBlinking": false,
+    "terminal.integrated.cursorStyle": "line",
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/dist": true
+    },
+    "files.exclude": {
+        // Git directory
+        "**/.git": true,
+        // MacOS special file
+        "**/.DS_Store": true,
+        // Cache directory
+        "**/.cache": true,
+        // Node.js Modules
+        "**/node_modules": true,
+        // Cargo output
+        "**/target": true,
+    },
+    "editor.suggestSelection": "first",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "editor.tabSize": 4,
+    "editor.formatOnPaste": true,
+    "editor.quickSuggestionsDelay": 0,
+    "breadcrumbs.enabled": false,
+    "workbench.iconTheme": "eq-material-theme-icons-ocean",
+    "workbench.productIconTheme": "fluent-icons",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "materialTheme.accent": "Pink",
+    "security.workspace.trust.enabled": false,
+    "security.workspace.trust.emptyWindow": false,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "update.mode": "none",
+    "redhat.telemetry.enabled": false,
+    "rpc.buttonEnabled": true,
+    "workbench.colorTheme": "Material Theme Ocean",
+    "rpc.buttonInactiveLabel": "My GitHub",
+    "rpc.buttonInactiveUrl": "https://github.com/MedzikUser",
+    "rpc.problemsText": "- {problemsCount} errors/warnings found",
+    "workbench.activityBar.visible": false,
+    "svg.preview.mode": "svg",
+    "rust-analyzer.server.path": "/usr/bin/rust-analyzer",
+    "rust-analyzer.diagnostics.disabled": [
+        "unresolved-proc-macro"
+    ], // use system `rust-analyzer` installation
+}
