@@ -43,22 +43,8 @@ bindkey "^[[4~" end-of-line
 bindkey "^H" backward-kill-word
 bindkey "^[[M" kill-word
 
-if [ -f /etc/os-release ]; then
-  . /etc/os-release
-  os=$(echo $NAME | awk '{print $1;}')
-else
-  os=$(uname -o)
-fi
-
-alias rsfetch="echo 'This copy of' $os 'is not activated. Go to Settings to activate' $os'.' && rsfetch"
-
-# init Node Version Manager
-source /usr/share/nvm/init-nvm.sh
-
-# loginctl
-alias suspend='loginctl suspend'
-alias poweroff='loginctl poweroff'
-alias reboot='loginctl reboot'
-
 # add ~/.bin to PATH
 export PATH="$HOME/.bin:$PATH"
+
+# qt5 use gtk theme
+export QT_QPA_PLATFORMTHEME=qt5ct
